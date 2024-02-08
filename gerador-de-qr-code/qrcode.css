@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgb(78, 78, 249), pink);
+}
+@keyframes mov-fundo {
+    to{
+        background-position: 0%;
+    }
+    from{
+        background-position: 100%;
+
+    }
+    
+}
+#container-mensagem{
+    position: fixed;
+    top: -7rem;
+    margin-left: 40%;
+    background-color: greenyellow;
+    padding:1.1rem;
+    border-radius:50px ;
+    max-width: 270px;
+    width: 100%;
+    box-shadow: 5px 10px 20px #00000055;
+    transition: 0.3s;
+}
+.fa-solid{
+margin-top:1px;
+border-radius: 1rem;
+font-size: 20px;
+margin-left: 10px;
+}
+.container-mensagem-movimento{
+    animation: movimento-mensagem-ida linear 0.5s forwards;
+}
+.container-mensagem-movimento-volta{
+    animation: movimento-mensagem-volta linear 0.5s forwards;
+}
+
+@keyframes movimento-mensagem-volta {
+    0%{
+        top:1.5rem;
+    }
+    50%{
+        top: 4rem;
+    }
+    100%{
+        top: -7rem;
+    }
+}
+@keyframes movimento-mensagem-ida {
+    0%{
+        top: -7rem;
+    }
+    50%{
+        top:1.5rem
+    }
+    75%{
+        top:0.8rem
+    }
+    100%{
+        top: 1.5rem;
+    }
+    
+}
+#container-geral{
+    background-color: #fff;
+    max-width: 600px;
+    margin: 8rem auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+#container-input h1{
+    margin-bottom: 1rem;
+}
+form{
+   
+    max-width: 430px;
+    display: flex;
+    flex-wrap:wrap ;
+    margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+}
+form input[type = text]{
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+form input[type = submit]{
+    margin-top: 1.5rem;
+    width: 80%;
+    padding: 1rem;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    background-color: rgb(14, 252, 1);
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+    
+
+}
+form input[type = submit]:hover{
+    transform: scale(0.97);
+        background-color: rgb(18, 219, 8);
+}
+#container-QRcode{
+    border-top: 3px solid #b0b0b0;
+    width: 400px;
+    margin:0 auto ;
+    
+}
+    .hide{
+        display: none;
+    }
+#box-QRcode{
+    margin: 1.5rem auto;
+    border: 3px solid #b0b0b0;
+height: 340px;
+width: 340px;
+border-radius: 0.5rem;
+
+}
+#box-QRcode img{
+margin: 3rem;
+width: 240px;
+
+}
